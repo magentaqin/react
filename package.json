@@ -70,6 +70,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
+    "nodemon": "^2.0.2",
     "object-assign": "^4.1.1",
     "pacote": "^9.5.6",
     "prettier": "1.19.1",
@@ -120,6 +121,7 @@
     "flow-ci": "node ./scripts/tasks/flow-ci.js",
     "prettier": "node ./scripts/prettier/index.js write-changed",
     "prettier-all": "node ./scripts/prettier/index.js write",
-    "version-check": "node ./scripts/tasks/version-check.js"
+    "version-check": "node ./scripts/tasks/version-check.js",
+    "track-changes": "nodemon --watch ./packages --exec 'yarn build react/index, react-dom/index --type=UMD' --ignore build/"
   }
 }
